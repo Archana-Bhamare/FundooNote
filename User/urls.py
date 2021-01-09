@@ -24,4 +24,5 @@ urlpatterns = [
     path('logout/', views.logoutForm.as_view(), name='logout'),
     path('forgot/', views.forgotPasswordForm.as_view(), name='forgot'),
     path('resetPassword/<username>/', views.resetPasswordForm.as_view(), name='resetPassword'),
+    path('userprofile/', views.UserProfileForm.as_view(), name='userprofile')
 ]
