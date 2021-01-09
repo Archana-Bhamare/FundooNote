@@ -5,14 +5,15 @@ from django.core.mail import EmailMessage
 from django.core.validators import validate_email
 from django.http import HttpResponse
 from django.template.loader import render_to_string
-from rest_framework import status
+from rest_framework import status, permissions
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from django_short_url.models import ShortURL as short
 from django_short_url.views import get_surl
 from Note_Project.settings import SECRET_KEY
+from User.models import Profile
 from User.serializer import RegistrationFormSerializer, LoginFormFormSerializer, ForgotPasswordFormSerializer, \
-    ResetPasswordFormSerializer
+    ResetPasswordFormSerializer, ProfileSerializer
 from User.token import token_activation
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
@@ -197,3 +198,22 @@ class resetPasswordForm(GenericAPIView):
 
         else:
             return Response("password missmatch")
+
+
+class UserProfileForm(GenericAPIView):
+    serializer_class = ProfileSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request):
+        img = request.FILES['image']
+        print(img)
+        try:
+            user = Profile.objects.get(user=request.user)
+            serializer = self.serializer_class(user, data={'image': img})
+            if serializer.is_valid():
+                serializer.save()
+                return Response('Profile Successfully Updated', status=status.HTTP_200_OK)
+            else:
+                return Response("Profile Update Failed", status=status.HTTP_400_BAD_REQUEST)
+        except:
+            return Response("Something went wrong", status=status.HTTP_400_BAD_REQUEST)
