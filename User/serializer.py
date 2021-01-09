@@ -24,3 +24,9 @@ class ResetPasswordFormSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserDetails
         fields = ['password', 'confirm_password']
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = ['image']
