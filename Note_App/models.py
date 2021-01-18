@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.postgres.fields import JSONField
+
 from User.models import UserDetails
 
 
@@ -16,7 +18,8 @@ class Notes(models.Model):
     note_title = models.CharField(max_length=20)
     note_text = models.TextField()
     label = models.ManyToManyField(to=Label, blank=True)
-    collaborators = models.ManyToManyField(User, blank=True)
+    collaborators = JSONField(null=True, blank=True,default=None)
+    #collaborators = models.ManyToManyField(User, blank=True)
     is_archive = models.BooleanField(default=False)
     is_pin = models.BooleanField(default=False)
     is_trash = models.BooleanField(default=False)
