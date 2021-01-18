@@ -3,6 +3,7 @@ import logging
 import redis
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.http import HttpResponse
 from django.utils.decorators import method_decorator
 from rest_framework import status
 from rest_framework.generics import GenericAPIView
@@ -39,22 +40,15 @@ class createNoteList(GenericAPIView):
         """
         user = request.user
         data = request.data
-        collaborator_list = []
-        try:
-            collaborator = data['collaborators']
-            for email in collaborator:
-                email_id = UserDetails.objects.filter(email=email)
-                user_id = email_id.values()[0]['id']
-                collaborator_list.append(user_id)
-            data['collaborators'] = collaborator_list
-            print(data['collaborators'])
-        except:
-            logger.debug('Collaborator was not added by the user')
-            pass
+        mycollb = request.data.get('collaborators')
+        collaborators_list = []
+        for email in mycollb:
+            user = UserDetails.objects.filter(email=email)
+            user_id = user.values()[0]['id']
+            collaborators_list.append(user_id)
+        data['collaborators'] = collaborators_list
         serializer = CreateNoteSerializer(data=request.data)
         if serializer.is_valid():
-            # note = Notes(user_id=self.request.user.id, note_title=serializer.data.get('note_title'),
-            #              note_text=serializer.data.get('note_text')).save()
             note = serializer.save(user=self.request.user.pk)
             logger.info("Note Successfully Created")
             redis.hmset(str(user.id) + "notes", {note.id: str(json.dumps(serializer.data))})
@@ -71,7 +65,8 @@ class displayNoteList(GenericAPIView):
 
     def get(self, request):
         """
-        @return: display the user note
+        @param request: User_id
+        @return: Display all the user notes
         """
         note = Notes.objects.filter(user_id=self.request.user.id)
         if 'note' in cache:
@@ -126,7 +121,7 @@ class UpdateNoteList(GenericAPIView):
             return Response("You not author to access this data", status=status.HTTP_400_BAD_REQUEST)
         serializer = self.serializer_class(note, data=request.data, partial=True)
         if serializer.is_valid():
-            note + note.save()
+            note = note.save()
             serializer.save()
             logger.info("Your Note Successfully Updated")
             cache.set(str(user.id) + "note" + str(id), note)
@@ -254,22 +249,12 @@ class LabelCreateView(GenericAPIView):
         @param request:user request
         @return: It create label and return 200 status code
         """
-        user = request.user
-        try:
-            label = request.data['label']
-            if label == "":
-                logger.error("label name should not be blank")
-                return Response({'details': 'label name should not be blank'})
-            if Label.objects.filter(user_id=user.id, labelname=label).exists():
-                logger.info("Label already exists")
-                return Response({'details': 'label already exists'})
-            label = Label.objects.create(labelname=label, user_id=user.id)
-            logger.info("New Label is created.")
-            redis.hmset(str(user.id) + "label", {label.id: label})
-            return Response({'details': 'new label created'}, status=status.HTTP_200_OK)
-        except Exception:
-            logger.error("Something went wrong")
-            return Response(Exception, status=status.HTTP_403_FORBIDDEN)
+        serializer = self.serializer_class(data=request.data, context={'user_id': request.user.id})
+        if serializer.is_valid():
+            serializer.save(user_id=request.user.id)
+            logger.info("Label Created")
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)
 
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
@@ -330,17 +315,20 @@ class SearchNoteView(GenericAPIView):
     This is the Search API
     """
     serializer_class = SearchNoteSerializer
+
     def get_searchdata(self, search_query=None):
         if search_query:
-            if cache.get(search_query):
-                cache.get(search_query)
+            search_data = search_query.split(' ')
+            if cache.get(search_data):
+                cache.get(search_data)
                 logger.info("data is coming from cache")
                 print("Data is coming from cache")
             else:
-                for query in search_query:
+                for query in search_data:
                     notes = Notes.objects.filter(Q(note_title__icontains=query) | Q(note_text__icontains=query))
                     if notes:
-                        cache.set(search_query, notes)
+                        print("Data from Database")
+                        cache.set(search_data, notes)
                     serializer = SearchNoteSerializer(notes, many=True)
                     return Response({'response_data': serializer.data}, status=status.HTTP_200_OK)
         else:
@@ -355,3 +343,45 @@ class SearchNoteView(GenericAPIView):
             note = self.get_searchdata()
         serializer = SearchNoteSerializer(note, many=True)
         return Response({'response_data': serializer.data}, status=status.HTTP_200_OK)
+
+# @method_decorator(login_required(login_url='/login/'), name="dispatch")
+# class NoteReminders(GenericAPIView):
+#
+#     def get(self, request):
+#         """
+#                     - Summary:
+#                     - Getting the Reminder-Note that have been created by the user
+#                     - Methods:
+#                     - GET: this method where actual login for Reminder note has been written
+#                     - Getting the Reminder Data with remind and state which must require these two
+#         """
+#         # pdb.set_trace()
+#         user = request.user
+#         try:
+#             reminder_data = Notes.objects.filter(user_id=user.id)
+#             reminder_list = reminder_data.values_list('reminder', flat=True)
+#             remind = []
+#             state = []
+#             logger.info(" Getting Inside the Reminder Data ")
+#             for i in range(len(reminder_list.values())):
+#                 if reminder_list.values()[i]['reminder'] is None:
+#                     # logger.info(" Getting Reminder Data %s", reminder_list.values()[i]['reminder'])
+#                     continue
+#                 elif timezone.localtime() > reminder_list.values()[i]['reminder']:
+#                     remind.append(reminder_list.values()[i])
+#                     logger.info(" Getting Reminder Timezone %s", timezone.now())
+#                 else:
+#                     state.append(reminder_list.values()[i])
+#                     logger.info(" Getting Reminder State  %s", state)
+#             reminder = {'remind': remind, 'state': state}
+#             logger.info(" Reminders data is loaded for %s on %s ", user, timezone.now())
+#             return HttpResponse(reminder.values(), status=200)
+#         except TypeError as e:
+#             logger.error("Error: %s for %s while fetching Reminder", str(e), user)
+#             response_smd = {"status": False, "message": "Reminder Not Set", 'data': []}
+#             return HttpResponse(json.dumps(response_smd), status=200)
+#         except Exception as e:
+#             logger.error("Error: %s for %s while fetching Reminder", str(e), user)
+#             response_smd = {"status": False, "message": "Reminder Not Set", 'data': []}
+#             return HttpResponse(json.dumps(response_smd), status=404)
+
