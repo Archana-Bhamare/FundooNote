@@ -1,4 +1,6 @@
 from rest_framework import serializers
+
+from User.models import UserDetails
 from .models import *
 from datetime import datetime, timedelta
 
@@ -7,7 +9,6 @@ class CreateNoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notes
         fields = ['note_title', 'note_text', 'label', 'collaborator']
-        #extra_kwargs = {'collaborator': {'read_only': True}}
 
 
 class DisplayNoteSerializer(serializers.ModelSerializer):
@@ -45,7 +46,6 @@ class ReminderSerializer(serializers.ModelSerializer):
 
 
 class CollaboratorSerializer(serializers.ModelSerializer):
-   # collaborator = serializers.EmailField()
     collaborator = serializers.PrimaryKeyRelatedField(queryset=UserDetails.objects.all())
 
     class Meta:
