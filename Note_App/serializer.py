@@ -1,24 +1,19 @@
 from rest_framework import serializers
 from .models import *
+from datetime import datetime, timedelta
 
 
 class CreateNoteSerializer(serializers.ModelSerializer):
-    label = serializers.CharField(max_length=20,default=None)
     class Meta:
         model = Notes
-        fields = ['note_title', 'note_text', 'label']
+        fields = ['note_title', 'note_text', 'label', 'collaborator']
+        #extra_kwargs = {'collaborator': {'read_only': True}}
 
 
 class DisplayNoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notes
         fields = '__all__'
-
-
-class RestoreNoteSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Notes
-        fields = ['is_trash']
 
 
 class SearchNoteSerializer(serializers.ModelSerializer):
@@ -35,4 +30,26 @@ class SearchNoteSerializer(serializers.ModelSerializer):
 class LabelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Label
-        fields = ['label']
+        fields = ['labelname']
+
+
+class ReminderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notes
+        fields = ['reminder']
+
+        def validate(self, time):
+            if time.replace(tzinfo=None) - datetime.now() < timedelta(seconds=10):
+                raise serializers.ValidationError('SET THE REMINDER FOR VALID TIME')
+            return time
+
+
+class CollaboratorSerializer(serializers.ModelSerializer):
+   # collaborator = serializers.EmailField()
+    collaborator = serializers.PrimaryKeyRelatedField(queryset=UserDetails.objects.all())
+
+    class Meta:
+        model = Notes
+        fields = ['note_title', 'note_text', 'label', 'collaborator']
+        extra_kwargs = {'note_title': {'read_only': True}, 'note_text': {'read_only': True},
+                        'label': {'read_only': True}}
