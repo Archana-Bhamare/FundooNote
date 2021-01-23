@@ -1,4 +1,4 @@
-##**Description:**
+## Description:
 - This is django project which create rest APIs for user authentication and note creation.
 - In this project contains Two Apps:
    1. __User__
