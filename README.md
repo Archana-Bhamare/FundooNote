@@ -36,11 +36,11 @@
         - **RabbitMQ** : RabbitMQ is a message broker. It accepts and forward messages.      
 - It contains CreateNote, UpdateNote, CreateLabel, Update Label apis.
 - Here User can create notes and label.
-
+---
 ##Install Requirement packages using:
   
     pip install -r requirements.txt
-
+---
 ##Start Django Project Creation:
 
 ### Project Startup:
@@ -102,7 +102,7 @@
   
 - Create Serializer class.
 - Create Views.
-
+---
 ##Swagger Configuration:
 - Firstly installing swagger using:
 
@@ -141,7 +141,7 @@
             path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
             path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
         ]
-
+---
 ##SonarQube Analysis:
 - Firstly installing sonarqube community version:
   - To install sonarqube, click Here : 
@@ -152,7 +152,7 @@
   [link]( https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
 - After the successfully installation:
   - The server is up and running.
-
+---
 ##Redis Installation:
 - **Redis**:
   - Redis stands for 'REmote DIctionary Server'.
@@ -178,7 +178,7 @@
         }
 
 - Redis used 6379 port number.
-
+---
 ##RabbitMQ:
 - **RabbitMQ**:
   - RabbitMQ is a message broker. It accepts and forward messages. 
@@ -196,7 +196,7 @@
   - Credentials: 
     - username : guest
     - password : guest
-  
+---  
 ##Celery:
 - **Celery**:
   - Celery is a task queue based on distributed message passing.
