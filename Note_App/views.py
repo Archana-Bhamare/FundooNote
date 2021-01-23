@@ -439,7 +439,7 @@ class CollaboratorView(GenericAPIView):
     serializer_class = CollaboratorSerializer
     queryset = Notes.objects.all()
 
-    def get(self, request):
+    def post(self, request):
         """
         This function used to add collaborator user
         @param request: user request
