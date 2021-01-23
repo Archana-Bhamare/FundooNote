@@ -43,7 +43,7 @@
 ---
 ##Start Django Project Creation:
 
-### Project Startup:
+###Project Startup:
 - Firstly create project directory folder-
   
   `mkdir FundooNotes`
@@ -57,7 +57,7 @@
         
   `python manage.py startapp <App_name>`
 
-### Database Connection:
+###Database Connection:
 - Firstly connect project with postgres database.
   - In setting.py file:
         
