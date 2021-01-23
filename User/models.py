@@ -1,5 +1,5 @@
+from django.contrib.auth.models import User
 from django.db import models
-
 
 class UserDetails(models.Model):
     username = models.CharField(max_length=50)
@@ -11,6 +11,5 @@ class UserDetails(models.Model):
         return self.username
 
 class Profile(models.Model):
-    user = models.OneToOneField(UserDetails, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.png', upload_to='profile_picture/')
-
