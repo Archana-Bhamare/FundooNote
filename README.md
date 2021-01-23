@@ -37,13 +37,13 @@
 - It contains CreateNote, UpdateNote, CreateLabel, Update Label apis.
 - Here User can create notes and label.
 ---
-##Install Requirement packages using:
+## Install Requirement packages using:
   
     pip install -r requirements.txt
 ---
-##Start Django Project Creation:
+## Start Django Project Creation:
 
-###Project Startup:
+### Project Startup:
 - Firstly create project directory folder-
   
   `mkdir FundooNotes`
@@ -57,7 +57,7 @@
         
   `python manage.py startapp <App_name>`
 
-###Database Connection:
+### Database Connection:
 - Firstly connect project with postgres database.
   - In setting.py file:
         
@@ -103,7 +103,7 @@
 - Create Serializer class.
 - Create Views.
 ---
-##Swagger Configuration:
+## Swagger Configuration:
 - Firstly installing swagger using:
 
       pip install -U drf-yasg
@@ -142,7 +142,7 @@
             path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
         ]
 ---
-##SonarQube Analysis:
+## SonarQube Analysis:
 - Firstly installing sonarqube community version:
   - To install sonarqube, click Here : 
   [link](https://www.sonarqube.org/downloads/)
@@ -153,7 +153,7 @@
 - After the successfully installation:
   - The server is up and running.
 ---
-##Redis Installation:
+## Redis Installation:
 - **Redis**:
   - Redis stands for 'REmote DIctionary Server'.
   - It is in-memory data structure store that can be utilized as a database, cache or message broker.
@@ -179,7 +179,7 @@
 
 - Redis used 6379 port number.
 ---
-##RabbitMQ:
+## RabbitMQ:
 - **RabbitMQ**:
   - RabbitMQ is a message broker. It accepts and forward messages. 
 - We need to install RabbitMQ:
@@ -197,7 +197,7 @@
     - username : guest
     - password : guest
 ---  
-##Celery:
+## Celery:
 - **Celery**:
   - Celery is a task queue based on distributed message passing.
   - Celery communicate via message broker to mediate between clients and workers. By default, celery used rabbitmq as a message broker.
@@ -229,7 +229,7 @@
   
    `celery -A myproject worker -l info`
  
-###Asynchronous tasks in celery:
+### Asynchronous tasks in celery:
 - To check the task status, install django_celery_results using:
 
   `pip install djanog-celery-results`
@@ -240,7 +240,7 @@
       CELERY_RESULT_BACKEND = 'django-db'
       CELERY_CACHE_BACKEND = 'django-cache'
 
-##Setting periodic task:
+### Setting periodic task:
 - Setting periodic task in celery.py file.
 - Firstly install the celery beat using:
 
