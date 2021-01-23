@@ -7,16 +7,12 @@ from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from Note_Project.settings import file_handler
+from User.models import UserDetails
 from .models import Notes, Label
-from .serializer import CreateNoteSerializer, DisplayNoteSerializer, RestoreNoteSerializer, LabelSerializer, \
-    SearchNoteSerializer, UserDetails, ReminderSerializer, CollaboratorSerializer
+from .serializer import CreateNoteSerializer, DisplayNoteSerializer, LabelSerializer, ReminderSerializer, CollaboratorSerializer
 from django.conf import settings
-
 from django.core.cache import cache
 from django.core.cache.backends.base import DEFAULT_TIMEOUT
-from pymitter import EventEmitter
-
-ee = EventEmitter()
 
 CACHE_TIL = getattr(settings, 'CACHE_TIL', DEFAULT_TIMEOUT)
 
@@ -26,37 +22,37 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 logger.addHandler(file_handler)
 
-CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
-
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class createNoteList(GenericAPIView):
+    """ This API used to create Note for User """
     serializer_class = CreateNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request):
         """
-            Summary:
-            --------
-                All the notes will be fetched for the user.
-            --------
-            Exception:
-                PageNotAnInteger: object
-                EmptyPage: object.
+        This get function returns particular user note
+        @param request: User id
+        @return: returns particular user note
         """
-        user = request.user
-        notes = Notes.objects.filter(user_id=user.id, is_archive=False)
-        serializer = self.serializer_class(notes, many=True)
-        logger.info("Particular Note is obtained, from get()")
-        return Response(serializer.data, status=200)
+        try:
+            user = request.user
+            notes = Notes.objects.filter(user_id=user.id, is_archive=False)
+            serializer = self.serializer_class(notes, many=True)
+            logger.info("Getting particular note of user")
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except:
+            logger.error("Note Not Found")
+            return Response("Note Not found", status=status.HTTP_404_NOT_FOUND)
 
     def post(self, request):
         """
+        This function creates Notes for user
         @param request: requesting for the note data
         @return: Note successfully created by the user
         """
         user = request.user
-        serializer = CreateNoteSerializer(data=request.data, partial=True)
+        serializer = self.serializer_class(data=request.data, partial=True)
         if serializer.is_valid():
             note = serializer.save(user_id=user.id)
             logger.info("Note Successfully Created")
@@ -69,11 +65,13 @@ class createNoteList(GenericAPIView):
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class displayNoteList(GenericAPIView):
+    """ This API used to fetch all the Notes """
     serializer_class = DisplayNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request):
         """
+        This API fetch all the User Notes
         @param request: User_id
         @return: Display all the user notes
         """
@@ -93,10 +91,17 @@ class displayNoteList(GenericAPIView):
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class UpdateNoteList(GenericAPIView):
+    """ This API used to update existing note """
     serializer_class = DisplayNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request, note_id):
+        """
+        This function returns the existing note of user
+        @param request: User Id
+        @param note_id: Note Id
+        @return: returns the existing note of user
+        """
         try:
             user = request.user
             note = Notes.objects.get(Q(pk=note_id) & Q(user_id=self.request.user.id))
@@ -108,6 +113,7 @@ class UpdateNoteList(GenericAPIView):
 
     def put(self, request, note_id):
         """
+        This function update the existing Note of User
         @param request: User Id
         @param note_id: Note_id of Note
         @return: It Update the existing note
@@ -129,10 +135,10 @@ class UpdateNoteList(GenericAPIView):
 
     def delete(self, request, note_id):
         """
+        This function trash the note or if note is already in trashed then it deleted permanently
         @param request: userid
         @param note_id: note id of note
-        @return: If not successfully deleted then it return 202 status code,
-                if that note not found then it returns 404 status code
+        @return: Delete the Note
         """
         user = request.user
         try:
@@ -153,12 +159,15 @@ class UpdateNoteList(GenericAPIView):
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class ArchiveNoteList(GenericAPIView):
+    """ This API used to get all the Archive Notes """
+    serializer_class = DisplayNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request):
         """
+        This function is used to get all Archive Notes
         @param request: userid
-        @return: if is_archive is True then it return 200 status code and display archive note list
+        @return: returns all the archive notes
         """
         user = request.user
         try:
@@ -168,22 +177,26 @@ class ArchiveNoteList(GenericAPIView):
                 return Response(notes.data, status=status.HTTP_200_OK)
             else:
                 note = Notes.objects.filter(is_archive=True, user_id=self.request.user.id)
-                serializer = DisplayNoteSerializer(note, many=True)
+                serializer = self.serializer_class(note, many=True)
                 logger.info("Data Coming From Database")
                 cache.set(notes, serializer)
                 return Response(serializer.data, status=status.HTTP_200_OK)
         except:
-            return Response("Error", status=status.HTTP_400_BAD_REQUEST)
+            logger.error("Note not Found")
+            return Response("Note Not Found", status=status.HTTP_404_NOT_FOUND)
 
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class PinNoteList(GenericAPIView):
+    """ This API used to get all the Pinned Notes """
+    serializer_class = DisplayNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request):
         """
+        This function is used to get all pinned notes
         @param request: userid
-        @return: if is_pin is True then it return 200 status code and display pin note list
+        @return: returns all the pinned notes
         """
         user = request.user
         try:
@@ -193,22 +206,26 @@ class PinNoteList(GenericAPIView):
                 return Response(notes.data, status=status.HTTP_200_OK)
             else:
                 note = Notes.objects.filter(is_pin=True, user_id=self.request.user.id)
-                serializer = DisplayNoteSerializer(note, many=True)
+                serializer = self.serializer_class(note, many=True)
                 logger.info("Data Coming From Database")
                 cache.set(notes, serializer)
                 return Response(serializer.data, status=status.HTTP_200_OK)
         except:
-            return Response("Error", status=status.HTTP_400_BAD_REQUEST)
+            logger.error("Note not Found")
+            return Response("Note Not Found", status=status.HTTP_404_NOT_FOUND)
 
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class TrashNoteList(GenericAPIView):
+    """ This API used to get all the Trashed Notes """
+    serializer_class = DisplayNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request):
         """
+        This function is used to get all the trashed notes
         @param request: userid
-        @return: if is_trash is True then it return 200 status code and display trash note list
+        @return: return all the trashed notes
         """
         user = request.user
         try:
@@ -220,33 +237,44 @@ class TrashNoteList(GenericAPIView):
                 return Response(serializer.data, status=status.HTTP_200_OK)
             else:
                 note = Notes.objects.filter(is_trash=True, user_id=self.request.user.id)
-                serializer = DisplayNoteSerializer(note, many=True)
+                serializer = self.serializer_class(note, many=True)
                 logger.info("Data Coming From Database")
                 cache.set(notes, note)
                 return Response(serializer.data, status=status.HTTP_200_OK)
         except:
-            return Response("Error", status=status.HTTP_400_BAD_REQUEST)
+            logger.error("Note not Found")
+            return Response("Note not Found", status=status.HTTP_404_NOT_FOUND)
 
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class RestoreNoteList(GenericAPIView):
-    serializer_class = RestoreNoteSerializer
+    """ This API used to restore notes from the trashed note list """
+    serializer_class = DisplayNoteSerializer
     queryset = Notes.objects.all()
 
     def get(self, request, note_id):
+        """
+        This function used to get all the trashed notes
+        @param request: User id
+        @param note_id: Note id
+        @return: returns trashed notes
+        """
         try:
             note = Notes.objects.get(
                 Q(pk=note_id) & Q(user_id=self.request.user.id) & Q(is_trash=True))
-            serializer = DisplayNoteSerializer(note)
+            serializer = self.serializer_class(note)
+            logger.info("Note Found")
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Notes.DoesNotExist:
+            logger.error("This Note does not exist")
             return Response("This note does not exit", status=status.HTTP_404_NOT_FOUND)
 
     def put(self, request, note_id):
         """
+        This function restore the note from the trashed list
         @param request:user id
         @param note_id: note id of note
-        @return: if is_trash is True then it restore note from trash and return 202 status code
+        @return: restore the trashed note
         """
         try:
             note = Notes.objects.get(
@@ -262,97 +290,117 @@ class RestoreNoteList(GenericAPIView):
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class LabelCreateView(GenericAPIView):
+    """ This API used to create label """
     serializer_class = LabelSerializer
     queryset = Label.objects.all()
 
     def get(self, request):
+        """
+        This function used to get all Labels
+        @param request:
+        @return: returns label
+        """
         try:
             user = request.user
             labels = Label.objects.filter(user_id=user.id)
-            serializer = LabelSerializer(labels, many=True)
+            serializer = self.serializer_class(labels, many=True)
+            logger.info("Label Found")
             return Response(serializer.data, status=200)
-        except Exception as e:
-            logger.error("Something went wrong")
-            return Response(e)
+        except:
+            logger.error("Label Not Found")
+            return Response("Label Not found", status=status.HTTP_404_NOT_FOUND)
 
     def post(self, request):
         """
+        This function create the labels
         @param request:user request
-        @return: It create label and return 200 status code
+        @return: create label
         """
-        user = request.user
-        serializer = self.serializer_class(data=request.data, context={'user_id': request.user.id})
-        if serializer.is_valid():
-            note = serializer.save(user_id=request.user.id)
-            logger.info("Label Created")
-            # redis.hmset(str(user.id) + "notes", {note.id: str(json.dumps(serializer.data))})
-            # print(redis.hgetall(str(user.id) + "notes"))
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            user = request.user
+            serializer = self.serializer_class(data=request.data, context={'user_id': request.user.id})
+            if serializer.is_valid():
+                note = serializer.save(user_id=request.user.id)
+                logger.info("Label Created Successfully")
+                # redis.hmset(str(user.id) + "notes", {note.id: str(json.dumps(serializer.data))})
+                # print(redis.hgetall(str(user.id) + "notes"))
+                return Response(serializer.data, status=status.HTTP_200_OK)
+        except:
+            logger.error("Label not Created")
+            return Response("Label not Created", status=status.HTTP_400_BAD_REQUEST)
 
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class LabelUpdateView(GenericAPIView):
+    """ This API used to updated existing label """
     serializer_class = LabelSerializer
     queryset = Label.objects.all()
 
     def get(self, request, id):
+        """
+        This function used to get existing label
+        @param request: user request
+        @param id: user id
+        @return: returns existing label
+        """
         try:
             user = request.user
             queryset = Label.objects.filter(user_id=user.id)
-            serializer = LabelSerializer(queryset)
-            return Response(serializer.data)
+            serializer = self.serializer_class(queryset)
+            logger.info("Label Found")
+            return Response(serializer.data, status=status.HTTP_200_OK)
         except Notes.DoesNotExist:
-            logger.error("label Does not Exist")
-            return Response("this label does not exist", status=status.HTTP_404_NOT_FOUND)
+            logger.error("This label does not Exist")
+            return Response("This label does not exist", status=status.HTTP_404_NOT_FOUND)
 
     def put(self, request, id):
         """
+        This function update the existing label
         @param request: user request
         @param id: user id
-        @return: it update the label and return 200 status code
+        @return: update existing label
         """
         user = request.user
         try:
             data = request.data
             label = request.data['label']
             user_id = self.request.user.id
-            serializer = LabelSerializer(user_id, data=data)
+            serializer = self.serializer_class(user_id, data=data)
             if serializer.is_valid():
                 label_update = serializer.save(user_id=user.id)
                 logger.info("Label successfully updated")
                 redis.hmset(str(user.id) + "label", {label_update.id: label})
-                return Response("Success", status=status.HTTP_200_OK)
+                return Response("Label successfully updated", status=status.HTTP_200_OK)
         except:
-            logger.error("Something went wrong")
-            return Response("failed")
+            logger.error("Label not updated, Something went wrong, Please check again!")
+            return Response("Label not updated, Something went wrong, Please check again!",
+                            status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, id):
         """
+        This function delete the label
         @param id: user id
-        @return: it successfully delete label and return 200 status code
+        @return: delete label
         """
         try:
             instance = self.request.user.id
             instance.delete()
-            logger.info("Label deleted successfully")
+            logger.info("Label Deleted successfully")
             redis.hdel(str(self.request.user.id) + "label", id)
-            return Response({'details': 'Label deleted successfully'}, status=status.HTTP_200_OK)
+            return Response("Label Deleted successfully", status=status.HTTP_200_OK)
         except:
-            logger.error("Label not deleted")
-            return Response({'details': 'Label not deleted'})
+            logger.error("Label not deleted, Please check again")
+            return Response("Label not deleted, Please check again", status=status.HTTP_400_BAD_REQUEST)
 
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
 class SearchNoteView(GenericAPIView):
-    """
-    This is the Search API
-    """
-    serializer_class = SearchNoteSerializer
+    """ This API used to search the notes """
+    serializer_class = DisplayNoteSerializer
 
-    def get_searchdata(self, request, search_query=None):
+    def get_search_data(self, search_query=None):
         """
-
+        This function returns the search notes
         @param search_query: user search data
         @return: if search data is in cache then it returns data from cache otherwise firstly it catch the data from database and set to the cache
         """
@@ -361,68 +409,79 @@ class SearchNoteView(GenericAPIView):
             if cache.get(search_data):
                 cache.get(search_data)
                 logger.info("data is coming from cache")
-                print("Data is coming from cache")
             else:
-                for query in search_data:
-                    note = Notes.objectes.filter(user_id=request.user.id, is_trash=False)
-                    notes = note.filter(Q(note_title__icontains=query) | Q(note_text__icontains=query))
-                    if notes:
-                        print("Data from Database")
-                        cache.set(search_data, notes)
-                    serializer = SearchNoteSerializer(notes, many=True)
-                    return Response({'response_data': serializer.data}, status=status.HTTP_200_OK)
+                note = Notes.objects.filter(user_id=self.request.user.id, is_trash=False)
+                notes = note.filter(Q(note_title__icontains=search_data) | Q(note_text__icontains=search_data))
+                if notes:
+                    logger.info("Data from Database")
+                    cache.set(search_data, notes)
         else:
             notes = Notes.objects.all()
             return notes
 
     def get(self, request):
         """
+        This function used to get search query
         @param request: user request for search data
         @return: it returns search data
         """
         search_query = request.GET.get('search')
         if search_query:
-            note = self.get_searchdata(search_query)
+            note = self.get_search_data(search_query)
         else:
-            note = self.get_searchdata()
-        serializer = SearchNoteSerializer(note, many=True)
+            note = self.get_search_data()
+        serializer = self.serializer_class(note, many=True)
         return Response({'response_data': serializer.data}, status=status.HTTP_200_OK)
 
-
+@method_decorator(login_required(login_url='/login/'), name="dispatch")
 class CollaboratorView(GenericAPIView):
+    """ This API used to add collaborator """
     serializer_class = CollaboratorSerializer
     queryset = Notes.objects.all()
 
-    def post(self, request, note_id):
+    def get(self, request):
+        """
+        This function used to add collaborator user
+        @param request: user request
+        @param note_id: note id
+        @return: create collaborator
+        """
         data = request.data
-        note = Notes.objects.get(pk=note_id)
         collaborator_list = []
         serializer = self.serializer_class(data=data)
         serializer.is_valid(raise_exception=True)
         collaborator_email = serializer.validated_data['collaborator']
         try:
-            for email in collaborator_email:
-                email_id = UserDetails.objects.get(email=email)
-                user_id = email_id.values()[0]['id']
-                collaborator_list.append(user_id)
-            note.data['collaborator'] = collaborator_list
-            note.save()
-            return Response("Collaborator added successfully", status=200)
+            for email in range(len(collaborator_email)):
+                email_id = UserDetails.objects.filter(email=email)
+                user_id = email_id.values('email')
+                collaborator_list[email].append(user_id[0])
+            logger.info("Collaborator Notes")
+            return Response({"Collaborator": collaborator_list}, status=status.HTTP_200_OK)
         except:
-            return Response("Something went wrong", status=400)
+            logger.error("There is no collaborator")
+            return Response("There is no collaborator", status=status.HTTP_400_BAD_REQUEST)
+
 
 @method_decorator(login_required(login_url='/login/'), name="dispatch")
-class ReminderAPIView(GenericAPIView):
+class ReminderView(GenericAPIView):
+    """ This API used to set note reminder"""
     serializer_class = ReminderSerializer
 
-    def get(self, request, id):
+    def patch(self, request, note_id):
+        """
+        This Function is used to set reminder
+        @param note_id: note id
+        @return: sets note reminder
+        """
         try:
-            user = request.user
-            user = UserDetails.objects.get(user_id=user.id)
-            serializer = ReminderSerializer(data=request.data)
-            serializer.is_valid(raise_exception=True)
-            reminder_note = Notes.objects.filter(user_id=user.id, reminder__isnull=False)
-            return Response(reminder_note.values(), status=status.HTTP_200_OK)
-        except:
-            return Response("Note not found", status=400)
-
+            note = Notes.objects.get(id=note_id, user=request.user.id)
+        except Notes.DoesNotExist:
+            logger.info('Note not found')
+            return Response({'response_msg':'Note Not Found'}, status=status.HTTP_404_NOT_FOUND)
+        serializer = self.serializer_class(data=request.data, initial=note, partial=True)
+        serializer.is_valid(raise_exception=True)
+        note.reminder = serializer.data.get('reminder')
+        note.save()
+        logger.info('Reminder is set')
+        return Response({'response_msg':'Reminder is set'}, status=status.HTTP_200_OK)
