@@ -1,0 +1,817 @@
+WARNING - 2021-01-09 14:11:47,651 - view's ArchiveNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'ArchiveNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:11:47,654 - view's TrashNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'TrashNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:11:47,678 - view's PinNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'PinNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:12:27,914 - view's ArchiveNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'ArchiveNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:12:27,915 - view's TrashNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'TrashNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:12:27,932 - view's PinNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'PinNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR - 2021-01-09 14:14:49,615 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+ERROR - 2021-01-09 14:14:56,543 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+ERROR - 2021-01-09 14:15:19,450 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+WARNING - 2021-01-09 14:16:41,075 - view's ArchiveNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'ArchiveNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:16:41,076 - view's TrashNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'TrashNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+WARNING - 2021-01-09 14:16:41,099 - view's PinNoteList raised exception during schema generation; use `getattr(self, 'swagger_fake_view', False)` to detect and short-circuit this
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\drf_yasg\inspectors\base.py", line 42, in call_view_method
+    return view_method()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'PinNoteList' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR - 2021-01-09 14:17:24,024 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+ERROR - 2021-01-09 14:17:30,935 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+ERROR - 2021-01-09 14:17:37,199 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+ERROR - 2021-01-09 14:17:52,384 - Internal Server Error: /User/login/
+Traceback (most recent call last):
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\User\views.py", line 114, in post
+    user = User.objects.get(username=user_data['username'], password=user_data['password'])
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KatK\django_projects\Note_Project\venv\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+WARNING - 2021-01-09 14:18:17,746 - Forbidden: /User/resetPassword/Archana/
+WARNING - 2021-01-09 14:18:24,270 - Forbidden: /User/resetPassword/Archu/
+WARNING - 2021-01-09 14:18:34,070 - Forbidden: /User/login/
+WARNING - 2021-01-09 14:18:44,300 - Not Found: /Note
+WARNING - 2021-01-09 14:18:56,999 - Not Found: /Note/
+WARNING - 2021-01-09 14:19:17,035 - Not Found: /Note/display
+INFO :2021-01-13 19:44:30,006 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Note Successfully Created
+INFO :2021-01-13 19:45:13,391 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Note Successfully Created
+INFO :2021-01-13 19:45:43,481 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Note Successfully Created
+ERROR :2021-01-15 11:19:14,448 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :99 : Archana for  {}
+INFO :2021-01-15 11:19:29,070 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :86 :note is created for Archana with note id as 19
+ERROR :2021-01-15 19:12:29,973 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :346 :Note Not Found
+ERROR :2021-01-15 19:12:41,973 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :303 :Note Does not Exist
+ERROR :2021-01-15 19:13:13,540 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :303 :Note Does not Exist
+ERROR :2021-01-15 19:13:52,185 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :303 :Note Does not Exist
+INFO :2021-01-15 20:01:49,970 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :393 :Note listed Successfully
+INFO :2021-01-15 20:04:36,088 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :355 :Note listed Successfully
+INFO :2021-01-15 20:04:54,100 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :385 :Note listed Successfully
+INFO :2021-01-15 20:05:13,550 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :385 :Note listed Successfully
+INFO :2021-01-15 20:05:40,307 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :416 :Note successfully restore from the trash
+INFO :2021-01-15 20:05:54,736 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :385 :Note listed Successfully
+INFO :2021-01-15 20:08:06,046 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :385 :Note listed Successfully
+INFO :2021-01-15 20:11:57,116 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :418 :Note successfully restore from the trash
+INFO :2021-01-15 20:12:12,116 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :385 :Note listed Successfully
+INFO :2021-01-15 20:21:58,577 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :385 :Note listed Successfully
+INFO :2021-01-15 20:24:55,446 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :279 :Note Successfully Created
+ERROR :2021-01-15 20:25:30,451 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :480 :Something went wrong
+ERROR :2021-01-15 20:26:11,504 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :281 :Something Went Wrong
+INFO :2021-01-15 20:30:20,190 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :408 :Note listed Successfully
+INFO :2021-01-15 20:36:14,856 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :280 :Note Successfully Created
+INFO :2021-01-15 20:37:01,248 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :280 :Note Successfully Created
+INFO :2021-01-15 20:40:55,830 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :280 :Note Successfully Created
+ERROR :2021-01-15 20:41:36,763 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :484 :Something went wrong
+INFO :2021-01-15 21:45:43,403 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :281 :Note Successfully Created
+ERROR :2021-01-16 09:19:01,630 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Something Went Wrong
+ERROR :2021-01-17 19:58:50,900 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :257 :Something went wrong
+ERROR :2021-01-17 20:02:06,071 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :257 :Something went wrong
+INFO :2021-01-18 10:16:17,444 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :367 : Getting Inside the Reminder Data 
+INFO :2021-01-18 10:16:17,491 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :379 : Reminders data is loaded for kitkat on 2021-01-18 04:46:17.491043+00:00 
+INFO :2021-01-19 10:52:35,971 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :284 :Label Created
+INFO :2021-01-19 10:54:02,931 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :284 :Label Created
+INFO :2021-01-19 11:34:47,458 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:34:55,929 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:35:24,360 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:35:34,458 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:36:02,999 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:40:45,032 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:46:56,427 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:47:21,399 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :292 :Label Created
+INFO :2021-01-19 11:47:47,351 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :292 :Label Created
+INFO :2021-01-19 11:48:15,082 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:48:35,685 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :59 :Note Successfully Created
+INFO :2021-01-19 11:48:39,999 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:50:36,054 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:50:52,111 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :59 :Note Successfully Created
+INFO :2021-01-19 11:50:53,970 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:51:43,891 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:51:46,207 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:52:08,545 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:52:24,657 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:52:45,668 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:58:50,059 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 11:59:54,226 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:02:37,503 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:02:38,664 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:11:17,465 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:19:37,110 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:19:51,793 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :59 :Note Successfully Created
+INFO :2021-01-19 12:19:53,832 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :47 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:21:18,092 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :292 :Label Created
+ERROR :2021-01-19 12:26:13,799 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :113 :This Note doesn't exist
+INFO :2021-01-19 12:48:17,923 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:48:45,710 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:49:49,315 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:50:07,881 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:50:10,012 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:50:11,007 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 12:50:12,396 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :118 :Particular Note is obtained, from get()
+INFO :2021-01-19 13:00:10,636 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :147 :Your Note Successfully Updated
+INFO :2021-01-19 13:00:18,980 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :147 :Your Note Successfully Updated
+INFO :2021-01-19 13:00:38,910 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :147 :Your Note Successfully Updated
+INFO :2021-01-19 13:10:18,467 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :171 :Data Coming From Database
+INFO :2021-01-19 13:10:30,392 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :171 :Data Coming From Database
+INFO :2021-01-19 13:10:34,377 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :171 :Data Coming From Database
+INFO :2021-01-19 13:11:45,650 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :171 :Data Coming From Database
+INFO :2021-01-19 13:11:53,755 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :171 :Data Coming From Database
+INFO :2021-01-19 13:14:25,802 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :167 :Data Coming from cache
+INFO :2021-01-19 13:14:30,967 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :167 :Data Coming from cache
+INFO :2021-01-19 13:14:59,694 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:15:07,606 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :167 :Data Coming from cache
+INFO :2021-01-19 13:18:56,850 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:19:00,393 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :167 :Data Coming from cache
+INFO :2021-01-19 13:19:16,511 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Data Coming From Database
+INFO :2021-01-19 13:19:38,289 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Data Coming From Database
+INFO :2021-01-19 13:20:03,450 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Data Coming From Database
+INFO :2021-01-19 13:20:09,029 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :221 :Data Coming from cache
+INFO :2021-01-19 13:20:14,537 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :221 :Data Coming from cache
+INFO :2021-01-19 13:21:36,055 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:21:48,033 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :193 :Data Coming from cache
+INFO :2021-01-19 13:22:11,779 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :193 :Data Coming from cache
+INFO :2021-01-19 13:22:44,707 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :198 :Data Coming From Database
+INFO :2021-01-19 13:25:28,835 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :203 :Data Coming From Database
+INFO :2021-01-19 13:25:29,969 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :193 :Data Coming from cache
+INFO :2021-01-19 13:27:13,156 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Particular Note is obtained, from get()
+INFO :2021-01-19 13:27:27,908 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:27:31,817 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Particular Note is obtained, from get()
+INFO :2021-01-19 13:27:49,323 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:27:55,186 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :170 :Data Coming From Database
+INFO :2021-01-19 13:28:12,532 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :165 :Data Coming from cache
+INFO :2021-01-19 13:28:33,043 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:28:45,033 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:29:07,340 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:29:41,317 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+INFO :2021-01-19 13:29:53,149 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+INFO :2021-01-19 13:30:05,709 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:30:12,015 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+INFO :2021-01-19 13:30:18,137 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+INFO :2021-01-19 13:31:04,099 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+INFO :2021-01-19 13:31:15,573 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:31:21,116 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :170 :Data Coming From Database
+INFO :2021-01-19 13:31:42,505 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :123 :Your Note Successfully Updated
+INFO :2021-01-19 13:31:55,843 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :196 :Data Coming From Database
+INFO :2021-01-19 13:32:07,154 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming from cache
+INFO :2021-01-19 13:32:09,526 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming from cache
+INFO :2021-01-19 13:32:10,601 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming from cache
+INFO :2021-01-19 13:33:00,851 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming from cache
+INFO :2021-01-19 13:33:02,668 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming from cache
+INFO :2021-01-19 13:33:03,615 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming from cache
+INFO :2021-01-19 13:33:43,563 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :192 :Data Coming from cache
+INFO :2021-01-19 13:35:05,690 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :192 :Data Coming from cache
+INFO :2021-01-19 13:36:08,105 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :220 :Data Coming From Database
+INFO :2021-01-19 13:36:36,323 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :252 :Note successfully restore from the trash
+INFO :2021-01-19 13:36:53,423 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :220 :Data Coming From Database
+INFO :2021-01-19 13:37:13,806 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :215 :Data Coming from cache
+INFO :2021-01-19 13:37:15,812 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :215 :Data Coming from cache
+INFO :2021-01-19 13:38:41,894 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :216 :Data Coming from cache
+INFO :2021-01-19 13:40:17,211 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Data Coming From Database
+INFO :2021-01-19 13:40:19,643 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :190 :Data Coming from cache
+INFO :2021-01-19 15:32:30,783 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+ERROR :2021-01-19 15:33:03,155 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :66 :Something Went Wrong
+INFO :2021-01-19 15:33:05,250 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-19 15:45:51,206 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :481 :Reminders data is loaded for Archana
+INFO :2021-01-19 15:51:24,279 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :481 :Reminders data is loaded for Archana
+INFO :2021-01-20 08:28:57,130 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :60 :Particular Note is obtained, from get()
+INFO :2021-01-20 08:29:05,481 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :60 :Particular Note is obtained, from get()
+INFO :2021-01-20 08:29:18,616 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :72 :Note Successfully Created
+INFO :2021-01-20 08:29:20,742 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :60 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:38:54,433 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :287 :Label Created
+INFO :2021-01-20 09:39:01,451 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :287 :Label Created
+INFO :2021-01-20 09:39:07,477 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :287 :Label Created
+INFO :2021-01-20 09:39:13,776 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :287 :Label Created
+INFO :2021-01-20 09:39:24,004 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:39:33,688 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:39:46,547 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 09:39:47,894 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:40:15,133 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 09:40:27,472 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 09:40:29,028 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:40:42,328 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 09:40:43,809 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:41:33,759 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 09:41:50,774 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 11:16:59,581 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 11:17:11,308 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 11:17:13,110 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 11:17:26,997 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 11:17:36,893 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 11:18:17,957 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 11:18:52,596 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 11:19:04,806 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 13:14:36,910 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :50 :Particular Note is obtained, from get()
+INFO :2021-01-20 13:16:26,125 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-20 17:28:14,836 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Getting particular note of user
+INFO :2021-01-20 17:28:48,954 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Getting particular note of user
+ERROR :2021-01-20 17:28:48,955 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :51 :Note Not Found
+INFO :2021-01-20 17:29:18,120 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Getting particular note of user
+INFO :2021-01-20 17:30:02,003 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :48 :Getting particular note of user
+INFO :2021-01-20 19:28:09,088 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :326 :Label Found
+INFO :2021-01-20 19:28:36,183 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :343 :Label Created Successfully
+INFO :2021-01-20 19:28:41,629 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :343 :Label Created Successfully
+INFO :2021-01-20 19:28:49,795 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :343 :Label Created Successfully
+INFO :2021-01-20 19:28:55,897 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :326 :Label Found
+INFO :2021-01-20 19:29:07,019 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :326 :Label Found
+INFO :2021-01-20 19:29:25,876 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :45 :Getting particular note of user
+INFO :2021-01-20 19:30:01,322 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :371 :Label Found
+ERROR :2021-01-20 19:30:32,329 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :396 :Label not updated, Something went wrong, Please check again!
+INFO :2021-01-21 11:01:02,992 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :518 :Note not found
+INFO :2021-01-21 11:01:12,304 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :518 :Note not found
+INFO :2021-01-21 11:01:16,419 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :518 :Note not found
+INFO :2021-01-21 11:02:19,377 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :524 :Reminder is set
+ERROR :2021-01-21 11:11:36,451 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :491 :Collaborator not added, Please check again
+INFO :2021-01-21 11:15:52,192 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :45 :Getting particular note of user
+ERROR :2021-01-21 11:16:30,222 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :67 :Something Went Wrong
+INFO :2021-01-21 11:17:48,738 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :45 :Getting particular note of user
+INFO :2021-01-21 11:18:00,998 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-21 11:18:02,948 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :45 :Getting particular note of user
+INFO :2021-01-21 11:35:41,054 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+ERROR :2021-01-21 11:35:41,056 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :49 :Note Not Found
+INFO :2021-01-21 11:35:52,470 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+ERROR :2021-01-21 11:35:52,471 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :49 :Note Not Found
+INFO :2021-01-21 11:36:10,807 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+INFO :2021-01-21 11:36:12,718 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+ERROR :2021-01-21 11:36:12,719 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :49 :Note Not Found
+INFO :2021-01-21 11:37:01,275 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 11:46:24,019 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 11:46:25,984 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 11:46:34,262 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 11:46:53,964 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 11:47:22,423 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+INFO :2021-01-21 11:47:24,733 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 12:27:14,840 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 12:45:08,756 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 12:45:27,165 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+ERROR :2021-01-21 12:45:27,192 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :68 :Something Went Wrong
+INFO :2021-01-21 12:47:28,544 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+ERROR :2021-01-21 12:47:28,560 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :68 :Something Went Wrong
+INFO :2021-01-21 12:47:32,665 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 12:48:13,793 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :514 :Reminder is set
+INFO :2021-01-21 12:49:00,645 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 12:49:13,130 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+ERROR :2021-01-21 12:49:13,145 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :68 :Something Went Wrong
+INFO :2021-01-21 12:51:53,766 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :514 :Reminder is set
+INFO :2021-01-21 12:58:05,968 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 12:58:23,816 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+ERROR :2021-01-21 12:58:23,844 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :68 :Something Went Wrong
+INFO :2021-01-21 17:12:13,963 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:13:18,959 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :63 :Note Successfully Created
+ERROR :2021-01-21 17:13:20,977 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :68 :Something Went Wrong
+INFO :2021-01-21 17:13:24,460 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:14:40,320 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:15:02,034 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-21 17:15:06,414 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+ERROR :2021-01-21 17:16:16,835 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :66 :Something Went Wrong
+INFO :2021-01-21 17:16:28,669 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:16:38,120 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:18:41,594 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:18:46,355 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:19:00,764 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-21 17:19:20,279 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-21 17:19:24,681 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:19:41,466 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 17:21:24,195 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :512 :Reminder is set
+INFO :2021-01-21 19:15:54,028 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 19:16:00,416 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 20:16:36,413 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 20:16:49,574 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-21 20:16:51,239 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-21 22:40:52,184 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :46 :Getting particular note of user
+INFO :2021-01-22 09:36:35,564 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :439 :Data from Database
+INFO :2021-01-22 09:37:12,819 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :433 :data is coming from cache
+INFO :2021-01-22 09:37:17,897 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :433 :data is coming from cache
+INFO :2021-01-22 09:37:25,672 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :439 :Data from Database
+INFO :2021-01-22 09:37:51,024 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :433 :data is coming from cache
+INFO :2021-01-22 09:42:00,086 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :434 :data is coming from cache
+INFO :2021-01-22 09:43:12,933 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :440 :Data from Database
+INFO :2021-01-22 09:43:17,824 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :440 :Data from Database
+INFO :2021-01-22 09:43:43,285 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :440 :Data from Database
+INFO :2021-01-22 09:44:32,981 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :434 :data is coming from cache
+INFO :2021-01-22 09:44:34,074 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :434 :data is coming from cache
+INFO :2021-01-22 09:45:31,567 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :434 :data is coming from cache
+INFO :2021-01-22 11:40:51,050 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:41:32,457 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:42:41,053 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:43:12,641 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:43:49,630 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:44:17,372 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:45:09,882 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:45:48,257 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:46:58,332 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:47:28,856 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:48:04,898 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:48:28,552 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:48:52,887 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:53:06,218 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:55:05,359 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:56:26,284 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:56:56,028 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:57:28,078 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:58:10,868 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:58:10,939 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 11:58:45,240 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:58:45,312 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 11:59:39,830 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 11:59:39,914 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:00:04,164 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:00:04,251 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:00:50,639 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:00:50,723 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:01:19,407 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:01:19,509 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:01:55,534 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:01:55,635 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:02:30,575 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:02:30,652 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:03:18,262 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:03:18,457 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:04:59,408 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:04:59,520 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:05:32,333 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:05:32,434 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:06:17,288 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:06:17,473 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:10:56,030 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:10:56,151 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:11:38,177 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:11:38,333 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:12:19,275 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:12:20,120 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:21:10,964 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:21:11,073 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:27:30,456 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:27:30,560 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:29:18,666 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:29:18,712 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 12:29:18,793 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:29:44,469 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:29:44,524 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 12:29:44,524 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 12:29:44,610 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:30:29,848 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:30:29,922 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 12:30:30,036 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 12:30:57,005 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 12:30:57,063 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 12:30:57,064 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 12:30:57,145 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:09:56,727 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+ERROR :2021-01-22 22:09:57,942 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:09:58,103 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:11:26,534 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:11:26,741 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:12:05,339 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:12:05,451 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:14:02,580 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:14:02,721 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:17:46,399 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:17:46,446 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:17:46,550 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:18:33,478 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:18:33,591 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:18:33,780 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:19:58,071 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:19:58,167 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:19:58,167 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:19:58,235 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:19:58,437 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:20:42,806 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:20:42,900 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:20:42,901 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:20:42,967 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:20:42,967 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:20:43,123 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:24:35,665 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:24:35,761 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:24:35,827 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:24:35,827 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:24:35,999 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:24:36,051 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:26:17,442 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:26:17,495 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:26:17,495 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:26:17,527 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:26:17,622 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:26:17,648 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:26:17,649 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:26:49,119 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:26:49,170 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:26:49,170 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:26:49,204 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:26:49,204 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:26:49,284 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:26:49,310 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:26:49,310 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:28:25,956 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:28:26,014 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:28:26,014 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:28:26,111 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:31:51,118 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:31:51,210 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:31:51,362 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:31:51,514 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:31:51,548 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:31:51,578 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:31:51,579 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:32:49,149 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:32:49,268 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:32:49,268 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:32:49,355 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:32:49,356 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:32:49,484 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:32:49,532 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:32:49,607 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:32:49,607 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:33:10,662 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:33:10,760 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:33:10,761 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:33:10,893 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:33:10,893 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:33:11,033 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:33:11,084 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:33:11,084 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:33:11,135 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:33:11,135 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:33:37,663 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:33:37,731 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:33:37,732 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:33:37,816 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:33:37,816 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:33:37,950 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:33:37,974 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:33:37,974 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:35:54,255 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:35:54,309 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:35:54,309 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:35:54,371 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:35:54,371 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:35:54,410 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :255 :Data Coming From Database
+INFO :2021-01-22 22:35:56,042 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:35:56,077 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:35:56,077 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:35:56,121 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :250 :Data Coming from cache
+INFO :2021-01-22 22:36:39,874 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:36:39,922 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:36:39,923 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:36:40,016 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:36:40,016 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:36:40,066 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :250 :Data Coming from cache
+INFO :2021-01-22 22:36:40,155 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:36:40,182 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:36:40,182 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:37:14,349 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:37:14,441 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:37:14,602 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:37:14,795 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:37:14,839 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:38:53,329 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:38:53,379 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:38:53,379 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:38:53,443 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:38:53,443 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:38:53,580 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:38:53,623 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:38:53,623 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:40:06,757 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:40:06,812 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:40:06,813 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:40:06,893 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:40:06,893 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:40:07,109 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:40:07,148 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:40:07,148 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:40:36,844 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:40:36,905 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:40:36,905 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:40:36,979 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:40:36,979 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:40:37,142 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:40:37,189 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:40:37,189 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:42:04,996 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:42:05,094 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:42:05,095 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:42:05,218 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:42:05,218 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+ERROR :2021-01-22 22:42:05,335 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :285 :This Note does not exist
+INFO :2021-01-22 22:42:05,451 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:42:05,480 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:42:05,480 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:43:04,891 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:43:04,947 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:43:05,046 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+ERROR :2021-01-22 22:43:05,125 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :285 :This Note does not exist
+INFO :2021-01-22 22:43:05,191 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:43:05,220 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:44:52,611 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:44:52,703 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:44:52,856 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+ERROR :2021-01-22 22:44:52,979 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :285 :This Note does not exist
+INFO :2021-01-22 22:44:53,090 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:44:53,138 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:44:53,138 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:45:54,081 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:45:54,184 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:45:54,185 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:45:54,276 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:45:54,276 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:45:54,360 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:45:54,384 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:45:54,384 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:47:17,898 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:47:18,009 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:47:18,010 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:47:18,147 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:47:18,149 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:47:18,331 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:47:18,360 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:47:18,360 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:48:09,089 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:48:09,171 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:48:09,269 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:48:09,419 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:48:09,520 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:48:09,543 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:48:36,409 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:48:36,459 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:48:36,511 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:48:36,512 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:48:36,631 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :217 :Data Coming from cache
+ERROR :2021-01-22 22:48:36,632 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :226 :Note not Found
+INFO :2021-01-22 22:48:36,820 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:49:20,386 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:49:20,409 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:49:20,468 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:49:20,561 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:49:20,663 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :222 :Data Coming From Database
+INFO :2021-01-22 22:49:20,775 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:49:57,860 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:49:57,884 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:49:57,937 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:49:57,985 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:49:57,985 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:49:58,118 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:51:19,720 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:51:19,833 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:51:19,902 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :186 :Data Coming from cache
+ERROR :2021-01-22 22:51:19,903 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :195 :Note not Found
+INFO :2021-01-22 22:51:20,082 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:56:22,617 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:56:22,666 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:56:22,861 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:56:23,302 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:56:23,379 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :191 :Data Coming From Database
+INFO :2021-01-22 22:56:23,562 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:56:58,511 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:56:58,536 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:56:58,582 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:56:58,631 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:56:58,785 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:58:40,819 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:58:40,857 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:58:40,922 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:58:41,034 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:58:41,229 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
+INFO :2021-01-22 22:59:46,012 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :509 :Reminder is set
+INFO :2021-01-22 22:59:46,051 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :325 :Label Found
+INFO :2021-01-22 22:59:46,101 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :62 :Note Successfully Created
+INFO :2021-01-22 22:59:46,363 :C:\Users\KatK\django_projects\Note_Project\Note_App\views.py :139 :Your Note Successfully Updated
