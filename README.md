@@ -257,3 +257,6 @@
 - Then run command:
     
     `celery -A myproject beat -l info`
+## Deploy FundooNote on AWS 
+- Click on the following link to know how to deploy django application on AWS
+[link](https://docs.google.com/document/d/1j1fh9MCJDG2gybPfs9Zk0Kvp5i9Q6u3ys6PrL9UU1G4/edit?usp=sharing)
